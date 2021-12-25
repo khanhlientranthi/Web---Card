@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/element_our/20190603/ourlarge/pngtree-a-blooming-lotus-flower-image_1443790.jpg" type="image/x-icon" />
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Card</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card__heart">
+            <i class='bx bx-heart'></i>
+        </div>
+        <div class="card_cart">
+            <i class='bx bx-cart-alt'></i>
+        </div>
+        <div class="card__img">
+           <center>
+               <img src="https://gongcha.com.vn/wp-content/uploads/2021/03/TRA-XANH-TRAI-CAY.png"  alt="">
+            </center>
+            
+        </div>
+        <div class="card__title">
+            Trà Xanh Trái Cây
+        </div>
+        <div class="card__price">
+            35K
+        </div>
+        <div class="card__size">
+            <h3>Size:</h3>
+            <span>M</span>
+            <span>L</span>
+        </div>
+        <div class="card__color">
+            <h3>Color:</h3>
+            <span class="card__color--green"></span>
+            <span class="card__color--pink"></span>
+            <span class="card__color--orange"></span>
+
+        </div>
+        <div class="card__action">
+            <button>Buy Now</button>
+            <button>Add card</button>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap');
+    :root{
+        --primary-color--:#999900;
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background: linear-gradient(to right, #CC9900, #669900 );
+        font-family: "Poppins";
+    }
+    .card{
+        margin: 120px auto;
+        width: 320px;
+        height: 400px;
+        background: #222222;
+        padding: 20px;
+        border-radius: 15px;
+        color: white;
+        position: relative;
+    }
+    .card__heart, .card_cart{
+        font-size: 15px;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        cursor: pointer;
+
+    }
+    .card_cart{
+        left: unset;
+        right: 20px;
+
+    }
+    .card__img{
+        width: 90%;
+        transition: 0.5s;
+        
+    }
+    .card__img img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .card__title, .card__price{
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .card__title{
+        color: var(--primary-color--);
+    }
+    .card__size, .card__color{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+    }
+    .card__size span{
+        padding: 1px 10px;
+        background:#DDDDDD ;
+        color:black;
+        border-radius: 5px;
+        margin: 0px 2px;
+        cursor: pointer;
+    }
+    .card__color span{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 0px 5px;
+        cursor: pointer;
+    }
+    .card__color--green{
+        background:green;
+    }
+    .card__color--pink{
+        background:pink;
+    }
+    .card__color--orange{
+        background:orange;
+    }
+    .card__action button{
+        background: var(--primary-color--);
+        border: none;
+        outline: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-right: 5px;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .card__action button:hover{
+        transform:scale(0.9) ;
+    }
+    .card:hover .card__img{
+        transform: translateY(-90px) rotate(-20deg);
+    }
+    .card:hover .card__title {
+        transform: translate(-38px, -72px) ;
+    }
+    .card:hover .card__price{
+        transform: translate(-117px, -72px) ;
+
+    }
+    .card__size{
+        margin-top:200px ;
+    }
+    .card__size, .card__color, .card__action{
+        
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        transition-delay:0.4s ;
+    }
+    .card:hover .card__size,
+    .card:hover .card__color,
+    .card:hover .card__action{
+        visibility: visible;
+        opacity: 100;
+    }
+    .card:hover .card__size{
+        margin-top: -30px;
+    }
+
+</style>
+</html>
